@@ -427,6 +427,10 @@ a.pc:hover .go{color:var(--gold-deep)}
 .mig3 .letters{gap:16px;border-top:none}.mig3 .letter{align-content:start}
 .mig3 .letter,.mig3 .letter + .letter{background:#12263C;border:1px solid #1F3A57;border-radius:14px;padding:26px 26px 24px;border-left:1px solid #1F3A57;transition:border-color .3s,transform .3s}
 .mig3 .letter:hover{border-color:rgba(200,167,94,.55);transform:translateY(-3px)}
+.mig3 .letter{display:block;position:relative;overflow:hidden;padding:22px 28px 26px}
+.mig3 .letter .L{font-size:128px;line-height:.9;margin-bottom:6px}
+.mig3 .letter .w{margin-top:0}
+@media (max-width:900px){.mig3 .letter .L{font-size:96px}}
 @media (max-width:900px){.mig3 .letters{gap:12px}.mig3 .letter,.mig3 .letter + .letter{padding:22px 20px 20px;border-top:1px solid #1F3A57}}
 
 .chapter .num{display:flex;align-items:baseline;gap:14px}.chapter .num .big{font-style:normal;font-size:64px;line-height:.8;color:var(--gold)}
