@@ -1,0 +1,213 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/login",
+      "destination": "https://portal.sonarismedical.com/",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/why-us/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/why-us/",
+      "permanent": true
+    },
+    {
+      "source": "/our-story",
+      "destination": "/why-us/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/:path*",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/programs",
+      "destination": "/clinical-education/",
+      "permanent": true
+    },
+    {
+      "source": "/programs/:path*",
+      "destination": "/clinical-education/",
+      "permanent": true
+    },
+    {
+      "source": "/clinical-training",
+      "destination": "/clinical-education/",
+      "permanent": true
+    },
+    {
+      "source": "/partners",
+      "destination": "/schools/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/portal-terms",
+      "destination": "/portal-terms/",
+      "permanent": true
+    },
+    {
+      "source": "/data-security",
+      "destination": "/data-and-access/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/clinical-placement-planning-guide",
+      "destination": "/resources/clinical-placement-planning-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-clinical-site",
+      "destination": "/resources/blog-clinical-site/",
+      "permanent": true
+    },
+    {
+      "source": "/ultrasound-clinical-placement",
+      "destination": "/resources/ultrasound-clinical-placement/",
+      "permanent": true
+    },
+    {
+      "source": "/pocus-training-planning-guide",
+      "destination": "/resources/pocus-training-planning-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/ultrasound-student-readiness",
+      "destination": "/resources/ultrasound-student-readiness/",
+      "permanent": true
+    },
+    {
+      "source": "/ultrasound-progress-reporting",
+      "destination": "/resources/ultrasound-progress-reporting/",
+      "permanent": true
+    },
+    {
+      "source": "/ultrasound-patient-communication",
+      "destination": "/resources/ultrasound-patient-communication/",
+      "permanent": true
+    },
+    {
+      "source": "/ultrasound-image-review",
+      "destination": "/resources/ultrasound-image-review/",
+      "permanent": true
+    },
+    {
+      "source": "/ultrasound-clinical-teamwork",
+      "destination": "/resources/ultrasound-clinical-teamwork/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-mri-safety",
+      "destination": "/resources/blog-mri-safety/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-mri-career",
+      "destination": "/resources/blog-mri-career/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-good-mri-tech",
+      "destination": "/resources/blog-good-mri-tech/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-placement-shortage",
+      "destination": "/resources/blog-placement-shortage/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-day-in-life",
+      "destination": "/resources/blog-day-in-life/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-mri-salary",
+      "destination": "/resources/blog-mri-salary/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-choosing-program",
+      "destination": "/resources/blog-choosing-program/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-mri-vs-ct",
+      "destination": "/resources/blog-mri-vs-ct/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-mri-advancements",
+      "destination": "/resources/blog-mri-advancements/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ]
+}
