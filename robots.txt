@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://mighealthcare.com/sitemap.xml
