@@ -46,7 +46,7 @@ ul,ol{margin:0;padding:0}
 .nav > a.btn:hover{background:var(--gold-hi)}
 .logo.sm svg{width:70px;height:34px}
 .logo.lg svg{width:132px;height:64px}
-footer .logo{--lg-m:#FFFFFF;--lg-d:#C8A75E;--lg-r:#C8A75E}
+footer .logo{--lg-m:#C8A75E;--lg-d:#FFFFFF;--lg-r:#C8A75E}
 
 .flag{background:var(--gold);color:var(--ink);font-size:13.5px;text-align:center;padding-block:8px;padding-left:var(--gl);padding-right:var(--gr)}
 
@@ -832,7 +832,7 @@ form{border-radius:12px}
 .hdr{top:10px;margin:10px 12px 0;border-radius:16px;background:rgba(11,26,43,.97);border:1px solid #1B3350;box-shadow:0 14px 34px -22px rgba(11,26,43,.55)}
 .hdr.scrolled{background:rgba(11,26,43,.92);box-shadow:0 16px 36px -20px rgba(11,26,43,.6)}
 .hdr .wrap{max-width:none;padding-left:28px;padding-right:22px}
-.hdr .logo{--lg-m:#FFFFFF;--lg-d:#C8A75E;--lg-r:#C8A75E}
+.hdr .logo{--lg-m:#C8A75E;--lg-d:#FFFFFF;--lg-r:#C8A75E}
 .hdr .logo svg{width:87px;height:42px}
 .hdr .menu-btn{background:transparent;color:#fff;border-color:#3A5A7B;border-radius:8px}
 @media (min-width:1201px){
