@@ -98,3 +98,13 @@ sh.forEach(function(s){var r=s.querySelector('.srail');s.querySelectorAll('.sb')
 addEventListener('resize',function(){sh.forEach(function(s){upd(s.querySelector('.srail'))})});
 document.querySelectorAll('.filters button').forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;w.classList.toggle('one',f!=='all');sh.forEach(function(s){var on=f==='all'||s.dataset.c===f;s.hidden=!on;s.style.display=on?'':'none';});});});
 })();
+
+(function(){var w=document.getElementById('shelves');if(!w)return;var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+w.querySelectorAll('.shelf').forEach(function(s){s.querySelectorAll('.sc').forEach(function(c,i){c.style.setProperty('--k',Math.min(i,5))})});
+function tick(el,to,ms){var t0=null;el.textContent='0';(function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/ms,1);el.textContent=Math.max(p>0?1:0,Math.round(to*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(f)})(performance.now())}
+if(!rm){document.documentElement.classList.add('js-anim');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var s=e.target;io.unobserve(s);s.classList.add('go');var c=s.querySelector('.cnt');if(c)tick(c,+c.dataset.to,1000);s.querySelectorAll('.ct').forEach(function(x,i){if(i<6)setTimeout(function(){tick(x,+x.dataset.to,1100)},250+i*100)})})},{threshold:.2});
+w.querySelectorAll('.shelf').forEach(function(s){io.observe(s)});
+if(matchMedia('(hover:hover)').matches){w.querySelectorAll('.tilt').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.transform='rotateY('+((x-.5)*7)+'deg) rotateX('+((.5-y)*7)+'deg) translateY(-3px)';c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%')});c.addEventListener('mouseleave',function(){c.style.transform=''})})}}
+document.querySelectorAll('.filters button').forEach(function(b){b.addEventListener('click',function(){w.querySelectorAll('.shelf').forEach(function(s){s.classList.add('go')})})});
+})();
