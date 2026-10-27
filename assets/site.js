@@ -59,7 +59,7 @@ window.MIGForm=function(){
     setTimeout(function(){b.textContent='Copy';},1800);
   });});
   if(window.MIGForm)window.MIGForm();
-  (function(){var s=document.getElementById('f-int');if(s&&/interest=pocus/.test(location.search))s.value='Professional Training and POCUS';})();
+  (function(){var s=document.getElementById('f-int');if(s&&/interest=pocus/.test(location.search))s.value='Professional Training and POCUS';if(s&&/interest=network/.test(location.search))s.value='Clinical Network Development';var st=new URLSearchParams(location.search).get('state'),m=document.getElementById('f-msg');if(st&&m&&!m.value)m.value='We would like to discuss clinical capacity in '+st.replace(/[<>]/g,'')+'.';})();
 })();
 
   (function(){var path=document.getElementById('path');if(!path)return;var fill=document.getElementById('railFill');
