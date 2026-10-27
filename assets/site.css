@@ -418,6 +418,13 @@ a.pc:hover .go{color:var(--gold-deep)}
 .quote{text-align:center;max-width:20em;margin:0 auto}
 .quote q{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(38px,5vw,66px);line-height:1.08;color:var(--ink);quotes:none}
 .quote .rule{width:56px;height:2px;background:var(--gold);margin:30px auto 0}
+.mig3{padding-block:64px}.mig3 .head{margin-bottom:28px}
+.mig3 .letter{display:grid;grid-template-columns:auto 1fr;column-gap:18px;align-items:start;padding:26px 30px 6px 0}
+.mig3 .letter + .letter{padding-left:30px}
+.mig3 .letter .L{font-size:64px;line-height:.85;grid-row:span 3}
+.mig3 .letter .w{margin-top:4px}.mig3 .letter h4{font-size:24px;margin:6px 0 8px}.mig3 .letter p{font-size:15.5px;line-height:1.6}
+@media (max-width:900px){.mig3{padding-block:48px}.mig3 .letter,.mig3 .letter + .letter{padding:22px 0 4px}.mig3 .letter .L{font-size:54px}}
+
 .chapter .num{display:flex;align-items:baseline;gap:14px}.chapter .num .big{font-style:normal;font-size:64px;line-height:.8;color:var(--gold)}
 .pq{margin:26px 0 0;padding-left:20px;border-left:2px solid var(--gold);font-family:var(--display);font-style:italic;font-size:24px;line-height:1.3;color:var(--ink)}
 .chapter .ph{overflow:hidden}.chapter .ph img{transition:filter 1.8s ease,transform 1.8s ease}
