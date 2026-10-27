@@ -8,7 +8,7 @@
   --hblue:#51A4BD; --teal:#1F6F8B;
   --on-dark:#C3D0DA; --on-dark-2:#93A6B5;
   --ok:#2E8B6A; --warn:#A86B12;
-  --lg-m:#C8A75E; --lg-d:#51A4BD;
+  --lg-m:#0B1A2B; --lg-d:#1D6E86; --lg-r:#C8A75E;
   --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
   --body:"DM Sans", "Helvetica Neue", Arial, sans-serif;
   --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -41,11 +41,12 @@ ul,ol{margin:0;padding:0}
 
 /* logo */
 .logo{display:inline-block;line-height:0;text-decoration:none}
-.logo svg{display:block;width:128px;height:55px}
+.logo svg{display:block;width:116px;height:56px}
 .nav > a.btn{background:var(--gold);color:var(--ink);padding:11px 16px}
 .nav > a.btn:hover{background:var(--gold-hi)}
-.logo.sm svg{width:76px;height:33px}
-.logo.lg svg{width:132px;height:57px}
+.logo.sm svg{width:70px;height:34px}
+.logo.lg svg{width:132px;height:64px}
+footer .logo{--lg-m:#FFFFFF;--lg-d:#C8A75E;--lg-r:#C8A75E}
 
 .flag{background:var(--gold);color:var(--ink);font-size:13.5px;text-align:center;padding-block:8px;padding-left:var(--gl);padding-right:var(--gr)}
 
