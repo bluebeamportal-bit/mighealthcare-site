@@ -125,3 +125,5 @@ var cm=d.querySelector('.cmap');if(cm){function hl(k){cm.querySelectorAll('[data
  cm.querySelectorAll('[data-r]').forEach(function(e){e.addEventListener('mouseenter',function(){hl(e.dataset.r)});e.addEventListener('focus',function(){hl(e.dataset.r)});e.addEventListener('click',function(){hl(e.dataset.r)})});
  cm.addEventListener('mouseleave',function(){hl('sd')});hl('sd')}
 })();
+
+(function(){var cs=document.querySelectorAll('.chapter');if(!cs.length||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;document.documentElement.classList.add('js-focus');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('focus');io.unobserve(e.target)}})},{threshold:.35});cs.forEach(function(c){io.observe(c)})})();
