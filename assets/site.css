@@ -670,6 +670,8 @@ form{border-radius:12px}
 @media (max-width:520px){.circ{width:88px;height:88px;border-width:3px}.tags{justify-content:flex-start}.stage:hover .circ{transform:none}}
 @media (prefers-reduced-motion:reduce){.stage:hover .circ{transform:none}}
 
+/* filters */
+.art[hidden]{display:none!important}
 /* nav chevron */
 .chev{width:11px;height:11px;margin-left:5px;vertical-align:1px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}.dd.open .chev{transform:rotate(180deg)}
 /* articles and legal */
