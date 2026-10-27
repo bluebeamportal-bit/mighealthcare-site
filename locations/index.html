@@ -65,7 +65,7 @@
   <section class="band dark netband"><div class="wrap">
     <div class="head"><div><div class="eyebrow">Where we work</div><h2>Rooted in San Diego. <span class="acc">Growing across four states.</span></h2></div><p>Our San Diego headquarters anchors a clinical network across California, Nevada, Arizona and Texas. Choose a state to see where we work.</p></div>
     <div class="netmap"><div class="tg" role="tablist" aria-label="Choose a state"><button type="button" data-v="all">All states</button><button type="button" data-v="ca">California</button><button type="button" data-v="nv">Nevada</button><button type="button" data-v="az">Arizona</button><button type="button" data-v="tx">Texas</button></div>
-      <div class="art" id="netmap-art" data-src="/assets/mig-map.html?v=111ac1bda2"></div>
+      <div class="art" id="netmap-art" data-src="/assets/mig-map.html?v=18f69d5afa"></div>
       <div class="legend"><span><em style="background:#A88A44"></em>MIG headquarters</span><span><em style="background:#1D6E86"></em>MIG site 2027</span><span><em style="border:1.6px solid #E9CF8F"></em>Partner market</span></div>
       <div class="hint">Click a state or a tab to focus</div>
       <div class="ncta"><p class="cx-h">Don’t see your city? We expand where our partners need us.</p><a class="btn btn-gold" href="/contact/?interest=network">Start a partnership →</a></div>
@@ -87,8 +87,8 @@
 .us .land.act{fill:#15304D;stroke:#C8A75E;stroke-width:1.2;stroke-opacity:.6;cursor:pointer;transition:fill .5s,stroke-opacity .5s}.us .land.act:hover{fill:#1C3E62}
 .us[data-f] .land.act.dim{fill:#0F2034;stroke-opacity:.15}
 .us .cty{fill:none;stroke:#23415F;stroke-width:.5}.us .smesh{fill:none;stroke:#2A4A6B;stroke-width:.8}
-.us .vg{opacity:0;transition:opacity .45s;pointer-events:none}.us .vg.on{opacity:1;pointer-events:auto}
-.us .lights circle{fill:#F3DCA0;opacity:.75}
+.us .vg{display:none}.us .vg.on{display:inline;animation:nmvg .45s ease}@keyframes nmvg{from{opacity:0}}.us .cty{transition:opacity .3s}.us.moving .cty{opacity:0}
+.us .lights path{fill:none;stroke:#F3DCA0;stroke-linecap:round;opacity:.75}
 .us .ar,.us .stn,.us .oc,.us .zt,.us .i5l{stroke:none}
 .us .stn{font-family:var(--mono);font-weight:600;letter-spacing:.55em;fill:#E8EEF4;opacity:.41}
 .us .ar{font-family:var(--mono);font-weight:500;letter-spacing:.2em;fill:#F3E2B3}.us .chip{fill:rgba(11,26,43,.85);stroke:rgba(200,167,94,.6)}
@@ -111,14 +111,14 @@ var C=v==='all'?{h:'Don’t see your city? We expand where our partners need us.
 {h:'Building clinical capacity in '+n+'? Let’s talk.',e:n,s:'We develop clinical sites and placements for programs in '+n+'.',q:'Building in '+n+'?',l:'Let\u2019s talk about '+n});
 var w=document.querySelector('.netmap .ncta');if(!w)return;w.classList.add('fade');setTimeout(function(){w.querySelectorAll('.cx-h').forEach(function(e){e.textContent=C.h});w.querySelectorAll('.cx-x').forEach(function(e){e.textContent=C.e});w.querySelectorAll('.cx-x').forEach(function(e){e.textContent=C.s});w.querySelectorAll('.cx-x').forEach(function(e){e.textContent=C.q});w.querySelectorAll('.cx-x').forEach(function(e){e.textContent=C.l});var a=w.querySelector('a');if(a)a.href='/contact/?interest=network'+(n?'&state='+encodeURIComponent(n):'');w.classList.remove('fade')},250)};
 function INIT(){(function(){var svg=document.getElementById('usm'),V={"all": [0, 0, 900, 560], "ca": [-105.05, 3.9, 568.04, 353.45], "nv": [37, 26.01, 405.39, 252.24], "az": [188.58, 192.31, 321.95, 200.33], "tx": [352.79, 188.09, 608.71, 378.75], "so": [157.07, 270.78, 104.69, 65.14]},cur='all',raf,cmp=svg.querySelector('.cmp');
-svg.querySelectorAll('.ar').forEach(function(t){var f=+t.dataset.f,b=t.getBBox(),r=document.createElementNS('http://www.w3.org/2000/svg','rect'),px=7*f,py=4*f;r.setAttribute('x',b.x-px);r.setAttribute('y',b.y-py);r.setAttribute('width',b.width+2*px);r.setAttribute('height',b.height+2*py);r.setAttribute('rx',(b.height+2*py)/2);r.setAttribute('class','chip');r.style.strokeWidth=f;t.parentNode.insertBefore(r,t)});
+function mk(g){if(g.dataset.mk)return;g.dataset.mk=1;g.querySelectorAll('.ar').forEach(function(t){var f=+t.dataset.f,b=t.getBBox(),r=document.createElementNS('http://www.w3.org/2000/svg','rect'),px=7*f,py=4*f;r.setAttribute('x',b.x-px);r.setAttribute('y',b.y-py);r.setAttribute('width',b.width+2*px);r.setAttribute('height',b.height+2*py);r.setAttribute('rx',(b.height+2*py)/2);r.setAttribute('class','chip');r.style.strokeWidth=f;t.parentNode.insertBefore(r,t)});}
 function place(b){var f=b[2]/900;cmp.setAttribute('transform','translate('+(b[0]+b[2]-40*f)+' '+(b[1]+b[3]-40*f)+') scale('+f+')')}
 function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
 function ui(v){document.querySelectorAll('.netmap .tg button').forEach(function(b){b.classList.toggle('on',b.dataset.v===(v==='so'?'ca':v))});document.querySelectorAll('.grid').forEach(function(g){g.classList.toggle('on',g.dataset.v===v)});
  svg.querySelectorAll('.land.act').forEach(function(p){p.classList.toggle('dim',v!=='all'&&p.dataset.st!==(v==='so'?'ca':v))});if(window.ctaUpdate)ctaUpdate(v);if(v==='all')svg.removeAttribute('data-f');else svg.setAttribute('data-f',v)}
-var last='sd';function show(v){svg.querySelectorAll('.vg').forEach(function(g){g.classList.toggle('on',g.dataset.v===v)});hl(last)}
-function go(v){if(v===cur)return;var a=svg.getAttribute('viewBox').split(' ').map(Number),b=V[v],t0=null;svg.querySelectorAll('.vg').forEach(function(g){g.classList.remove('on')});cur=v;ui(v);cancelAnimationFrame(raf);
- function st(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1100),e=ease(k),c=a.map(function(x,i){return x+(b[i]-x)*e});svg.setAttribute('viewBox',c.join(' '));place(c);if(k<1)raf=requestAnimationFrame(st);else show(v)}
+var last='sd';function show(v){svg.classList.remove('moving');svg.querySelectorAll('.vg').forEach(function(g){g.classList.toggle('on',g.dataset.v===v);if(g.dataset.v===v)mk(g)});hl(last)}
+function go(v){if(v===cur)return;var a=svg.getAttribute('viewBox').split(' ').map(Number),b=V[v],t0=null;svg.querySelectorAll('.vg').forEach(function(g){g.classList.remove('on')});cur=v;svg.classList.add('moving');ui(v);cancelAnimationFrame(raf);
+ function st(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/950),e=ease(k),c=a.map(function(x,i){return x+(b[i]-x)*e});svg.setAttribute('viewBox',c.join(' '));place(c);if(k<1)raf=requestAnimationFrame(st);else show(v)}
  raf=requestAnimationFrame(st)}
 function hl(k){last=k;document.querySelectorAll('.vg.on [data-r],.strip [data-r]').forEach(function(e){e.classList.toggle('hl',e.dataset.r===k)})}
 document.querySelectorAll('.netmap .tg button').forEach(function(b){b.addEventListener('click',function(){go(b.dataset.v)})});
@@ -133,8 +133,8 @@ if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es)
     <div class="head"><div><div class="eyebrow">Our footprint</div><h2>Four regions. <span class="acc">One training standard.</span></h2></div><p>Patient-based clinical experience takes place at partner clinical sites. Our hubs host readiness training, coaching and collaboration.</p></div>
     <div class="locs">
       <div class="loc"><div class="ph"><img src="/img/lo-sd.webp?v=318e69ba" alt="San Diego Bay and Coronado from above" width="700" height="770" loading="lazy"></div><div><span class="status open">Open now</span><h4>San Diego</h4><p>Headquarters and readiness hub at Symphony Towers, downtown San Diego.</p><div class="coord">32.716° N, 117.161° W</div></div></div>
-      <div class="loc"><div class="ph"><img src="/img/lo-oc.webp?v=65694430" alt="Orange County coastline from above" width="700" height="770" loading="lazy"></div><div><span class="status soon">Opening Spring 2027</span><h4>Orange County</h4><p>Bringing clinical training support closer to Orange County schools and students.</p><div class="coord">33.746° N, 117.868° W</div></div></div>
-      <div class="loc"><div class="ph"><img src="/img/lo-la.webp?v=9ed286fb" alt="Los Angeles skyline at sunset" width="700" height="770" loading="lazy"></div><div><span class="status soon">Opening Spring 2027</span><h4>Los Angeles</h4><p>Expanding clinical education partnerships across Los Angeles.</p><div class="coord">34.052° N, 118.244° W</div></div></div>
+      <div class="loc"><div class="ph"><img src="/img/lo-oc.webp?v=65694430" alt="Orange County coastline from above" width="700" height="770" loading="lazy"></div><div><span class="status soon">Opening 2027</span><h4>Orange County</h4><p>Bringing clinical training support closer to Orange County schools and students.</p><div class="coord">33.746° N, 117.868° W</div></div></div>
+      <div class="loc"><div class="ph"><img src="/img/lo-la.webp?v=9ed286fb" alt="Los Angeles skyline at sunset" width="700" height="770" loading="lazy"></div><div><span class="status soon">Opening 2027</span><h4>Los Angeles</h4><p>Expanding clinical education partnerships across Los Angeles.</p><div class="coord">34.052° N, 118.244° W</div></div></div>
       <div class="loc"><div class="ph"><img src="/img/lo-nc.webp?v=a7ebeae8" alt="Golden Gate Bridge tower in San Francisco" width="700" height="770" loading="lazy"></div><div><span class="status plan">Planned 2027</span><h4>Central and Northern California</h4><p>Our next chapter in California, guided by partner school demand.</p><div class="coord">37.774° N, 122.419° W</div></div></div>
     </div>
     <p style="color:var(--slate-2);font-size:14px;margin-top:22px">Specific addresses for new locations will be announced. Clinical network development extends to partner markets beyond California.</p>
