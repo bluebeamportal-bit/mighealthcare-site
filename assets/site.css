@@ -831,3 +831,4 @@ form{border-radius:12px}
 }
 @media (max-width:1200px){.hdr .nav{top:calc(100% + 8px);border-radius:14px;border:1px solid var(--mist);box-shadow:0 18px 40px -24px rgba(11,26,43,.5)}}
 footer{margin:0 12px 12px;border-radius:18px;overflow:hidden}
+body[data-page="schools"] .phero{margin:12px 12px 0;border-radius:18px;overflow:hidden}
