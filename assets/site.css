@@ -785,3 +785,20 @@ form{border-radius:12px}
 /* production */
 .fnote.ferr{color:#9A4A3A}
 .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+
+/* navy floating header */
+.hdr{top:10px;margin:10px 12px 0;border-radius:16px;background:rgba(11,26,43,.97);border:1px solid #1B3350;box-shadow:0 14px 34px -22px rgba(11,26,43,.55)}
+.hdr.scrolled{background:rgba(11,26,43,.92);box-shadow:0 16px 36px -20px rgba(11,26,43,.6)}
+.hdr .wrap{max-width:none;padding-left:28px;padding-right:22px}
+.hdr .logo{--lg-m:#FFFFFF;--lg-d:#C8A75E;--lg-r:#C8A75E}
+.hdr .logo svg{width:87px;height:42px}
+.hdr .menu-btn{background:transparent;color:#fff;border-color:#3A5A7B;border-radius:8px}
+@media (min-width:1201px){
+ .hdr .nav > a:not(.btn):not(.plog),.hdr .nav > .dd > button{color:#C9D6E2}
+ .hdr .nav > a:not(.btn):not(.plog):hover,.hdr .nav > .dd > button:hover,.hdr .nav a.cur,.hdr .nav .dd.cur > button{color:#fff}
+ .hdr .nav .chev{stroke:currentColor}
+ .hdr .nav a.plog{color:#E8EEF4;background:transparent;border-color:rgba(81,164,189,.8);box-shadow:none}
+ .hdr .nav a.plog:hover{background:#1F6F8B;border-color:#1F6F8B;color:#fff}
+}
+@media (max-width:1200px){.hdr .nav{top:calc(100% + 8px);border-radius:14px;border:1px solid var(--mist);box-shadow:0 18px 40px -24px rgba(11,26,43,.5)}}
+footer{margin:0 12px 12px;border-radius:18px;overflow:hidden}
