@@ -430,9 +430,11 @@ a.pc:hover .go{color:var(--gold-deep)}
 .mig3 .letter{display:block;position:relative;overflow:hidden;padding:26px 28px 28px}
 .mig3 .letter .L{font-size:170px;line-height:.82;color:rgba(200,167,94,.14);margin:0 0 0 10px;transition:color .4s}
 .mig3 .letter:hover .L{color:rgba(200,167,94,.24)}
-.mig3 .letter .w{display:block;margin:-6px 0 30px;padding-left:42%}
-.mig3 .letter h4{margin-top:0}
-@media (max-width:900px){.mig3 .letter .L{font-size:120px}.mig3 .letter .w{margin-bottom:18px}}
+.mig3 .letter .L{display:inline-block;vertical-align:bottom}
+.mig3 .letter .w{display:inline-block;vertical-align:bottom;margin:0 0 6px 4px;padding:0}
+.mig3 .letter h4{margin-top:24px}
+.mig3{margin:0 12px;border-radius:18px}
+@media (max-width:900px){.mig3 .letter .L{font-size:120px}.mig3 .letter h4{margin-top:16px}}
 @media (max-width:900px){.mig3 .letters{gap:12px}.mig3 .letter,.mig3 .letter + .letter{padding:22px 20px 20px;border-top:1px solid #1F3A57}}
 
 .chapter .num{display:flex;align-items:baseline;gap:14px}.chapter .num .big{font-style:normal;font-size:64px;line-height:.8;color:var(--gold)}
