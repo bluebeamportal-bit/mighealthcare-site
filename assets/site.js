@@ -50,7 +50,7 @@ window.MIGForm=function(){
   document.addEventListener('keydown',function(e){if(e.key==='Escape')dds.forEach(shut);});
   document.querySelectorAll('.filters button').forEach(function(b){b.addEventListener('click',function(){
     document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-    var f=b.dataset.f;document.querySelectorAll('#arts .art').forEach(function(a){a.hidden=!(f==='all'||a.dataset.c===f);});
+    var f=b.dataset.f;document.querySelectorAll('#arts .art').forEach(function(a){var on=(f==='all'||a.dataset.c===f);a.hidden=!on;a.style.display=on?'':'none';});
   });});
   document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
     var el=document.getElementById(b.dataset.copy);
