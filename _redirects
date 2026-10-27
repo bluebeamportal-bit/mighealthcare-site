@@ -1,0 +1,47 @@
+# ------------------------------------------------------------
+# Partner login: sends visitors to the MIG Partner Portal. If the
+# portal moves to a new address, change it here and redeploy.
+# ------------------------------------------------------------
+/login  https://portal.sonarismedical.com/  302
+
+# Old Sonaris and common addresses, forwarded to the new pages
+/about              /why-us/               301
+/about-us           /why-us/               301
+/our-story          /why-us/               301
+/contact-us         /contact/              301
+/blog               /resources/            301
+/blog/*             /resources/            301
+/articles/*         /resources/            301
+/programs           /clinical-education/   301
+/programs/*         /clinical-education/   301
+/clinical-training  /clinical-education/   301
+/partners           /schools/              301
+/home               /                      301
+/portal-terms       /portal-terms/         301
+/data-security      /data-and-access/      301
+/privacy            /privacy/              301
+/clinical-placement-planning-guide  /resources/clinical-placement-planning-guide/  301
+/blog-clinical-site  /resources/blog-clinical-site/  301
+/ultrasound-clinical-placement  /resources/ultrasound-clinical-placement/  301
+/pocus-training-planning-guide  /resources/pocus-training-planning-guide/  301
+/ultrasound-student-readiness  /resources/ultrasound-student-readiness/  301
+/ultrasound-progress-reporting  /resources/ultrasound-progress-reporting/  301
+/ultrasound-patient-communication  /resources/ultrasound-patient-communication/  301
+/ultrasound-image-review  /resources/ultrasound-image-review/  301
+/ultrasound-clinical-teamwork  /resources/ultrasound-clinical-teamwork/  301
+/blog-mri-safety  /resources/blog-mri-safety/  301
+/blog-mri-career  /resources/blog-mri-career/  301
+/blog-good-mri-tech  /resources/blog-good-mri-tech/  301
+/blog-placement-shortage  /resources/blog-placement-shortage/  301
+/blog-day-in-life  /resources/blog-day-in-life/  301
+/blog-mri-salary  /resources/blog-mri-salary/  301
+/blog-choosing-program  /resources/blog-choosing-program/  301
+/blog-mri-vs-ct  /resources/blog-mri-vs-ct/  301
+/blog-mri-advancements  /resources/blog-mri-advancements/  301
+/why-healthcare-teams-invest-in-pocus-training  /resources/why-healthcare-teams-invest-in-pocus-training/  301
+/pocus-training-for-nurses-physicians-and-apps  /resources/pocus-training-for-nurses-physicians-and-apps/  301
+/on-site-vs-in-person-pocus-training  /resources/on-site-vs-in-person-pocus-training/  301
+/measuring-pocus-training-competency  /resources/measuring-pocus-training-competency/  301
+/building-a-hospital-pocus-program  /resources/building-a-hospital-pocus-program/  301
+/onboarding-imaging-hires-skills-training  /resources/onboarding-imaging-hires-skills-training/  301
+/ultrasound-skills-remediation-for-staff  /resources/ultrasound-skills-remediation-for-staff/  301
