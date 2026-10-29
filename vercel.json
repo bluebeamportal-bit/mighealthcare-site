@@ -4,7 +4,7 @@
   "redirects": [
     {
       "source": "/login",
-      "destination": "https://portal.sonarismedical.com/",
+      "destination": "https://portal.mighealthcare.com/",
       "permanent": false
     },
     {
