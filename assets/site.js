@@ -24,8 +24,8 @@ window.MIGForm=function(){
       note.className='fdone';note.textContent='Your email app should open with your message ready to send. If it does not, email us at '+INQUIRY_EMAIL+'.';return}
     btn.disabled=true;btn.textContent='Sending…';
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:subject,from_name:'MIG Healthcare website',name:name,email:email,organization:v('organization'),contacting_as:v('role'),interested_in:v('interest'),message:v('message')})})
-    .then(function(r){return r.json()}).then(function(d){if(!d.success)throw 0;f.reset();note.className='fdone';note.textContent='Thank you. Your inquiry was sent, and a member of our team will reply within one business day.'})
+      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:subject,from_name:'MIG Healthcare website',name:name,email:email,phone:v('phone')||'Not provided',organization:v('organization'),contacting_as:v('role'),interested_in:v('interest'),message:v('message')})})
+    .then(function(r){return r.json()}).then(function(d){if(!d.success)throw 0;try{sessionStorage.setItem('mig_ty',JSON.stringify({n:v('first_name'),i:v('interest')}))}catch(x){}f.reset();note.className='fdone';note.textContent='Thank you. Your inquiry was sent.';location.href='/thank-you/'})
     .catch(function(){note.className='fnote ferr';note.textContent='Something went wrong sending your inquiry. Please email us at '+INQUIRY_EMAIL+'.'})
     .finally(function(){btn.disabled=false;btn.textContent='Send inquiry'});
   });
